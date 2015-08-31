@@ -1,0 +1,109 @@
+[{
+	id: '{{guid()}}',
+	created: '{{date()}}',
+	ship_name:	'{{random("Millenium Falcon", "M/S Titanic")}}',
+	imo: 'IMO{{integer(1000000, 9999999)}}',
+  	arrival:	'{{date()}}',
+    departure: '{{date()}}',
+	ship_type: 'General cargo vessel',
+	commander: 'Han Solo',
+	travel_plan: [
+    	'{{repeat(2, 5)}}',
+      	{ 
+          harbor: '{{city()}}',
+          code: '{{country(true)}}'
+          
+        }],
+	nationality: {
+    	name: '{{country()}}',
+      	code: '{{country(true)}}'
+    },
+	assigned_to: '{{firstName()}} {{surname()}}',
+  	cargo: [
+    	'{{repeat(3,10)}}',
+      	{
+        	type: '{{random("djur", "vapen", "konfektion")}}'
+        }
+    ],
+  	ship_details: {
+    	registration: '1',
+      	dock: 'FR{{integer(1000000,9999999)}}',
+      	gross_weight: '{{integer(1000, 20000)}}',
+  		net_weight: '{{integer(10, 200)}}',
+ 		passengers: '{{integer(0, 30)}}',
+ 		crew: '{{integer(1, 40)}}'
+    },
+  	information: {
+      name: '{{company()}}',
+      eori: 'SE{{integer(11111111, 99999999)}}',
+      role: 'CPE Master',
+      street: '{{street()}}',
+      apt: '',
+      post_address: '{{integer(11111, 99999)}} {{city()}}',
+      country: '{{country()}}'
+    },
+ 	contact: {
+      name: '{{firstName()}} {{surname()}}',
+      email: '{{firstName()}}@{{company()}}.com',
+      phone: '+47 (0){{integer(111,999)}}-{{integer(111, 999)}} {{integer(11,99)}} {{integer(11, 99)}}',
+      fax: '+{{integer(00,99)}} (0){{integer(111,999)}}-{{integer(111, 999)}} {{integer(11,99)}} {{integer(11, 99)}}'
+    },
+  	blocks: [
+      {
+      	id: 'goods',
+        title: 'Varor',
+        status: '{{random("0", "1", "2")}}',
+        items: [
+       		'{{repeat(2, 20)}}',
+          	{
+            	id: 'EAN{{integer(100000,999999)}}',
+              	description: '{{lorem(4, "words")}}',
+              	gross_weight: '{{integer(5, 2000)}}',
+              	parcels: '{{integer(1, 100)}}',
+              	alert: function() {
+                	var i = Math.floor((Math.random() * 10) + 1);
+                	var out = null;
+                  	if (i > 8) {
+                    	out = 1;
+                    };
+					return out;
+                },
+              	attachment: function() {
+                	var i = Math.floor((Math.random() * 10) + 1);
+                	var out = null;
+                  	if (i > 7) {
+                    	out = Math.floor((Math.random() * 10) + 1);
+                    };
+					return out;
+                },
+              	comments: function() {
+                	var i = Math.floor((Math.random() * 10) + 1);
+                	var out = null;
+                  	if (i > 7) {
+                    	out = Math.floor((Math.random() * 10) + 1);
+                    }
+                                          
+					return out;
+                }
+            }
+        ]
+      },
+      {
+      	id: 'arrival',
+        title: 'Ankomst',
+        status: '{{random("0", "1", "2")}}'
+        
+      },
+      {
+      	id: 'discharge',
+        title: 'Lossning',
+        status: '{{random("0", "1", "2")}}'
+      },
+      {
+      	id: 'departure',
+        title: 'Avgång',
+        status: '{{random("0", "1", "2")}}'
+      }
+    ] 
+	
+}]

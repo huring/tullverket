@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title></title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300" rel="stylesheet" type="text/css">
+ 	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body class="body prototype inbox">
+<div id="nav"><!-- Handlebars template: Nav --></div>
+<div id="header"><!-- Handlebars template: Header --></div>
+
+	<div class="content">
+
+	
+	<div id="tag-container"><!-- Handlebars template: Search tag --></div>
+
+	<div class="userdata">
+		<div class="row">
+			<div class="col-md-11"><h4>Mina ärenden</h4></div>
+			
+		</div>
+		<div id="user-container" class="list"><!-- Handlebars template: List item --></div>
+	</div>
+	
+		<div id="alldata">
+			<div class="row">
+					<div class="col-md-11"><h4 id="list-item-header">Alla ärenden</h4></div>
+					<div class="col-md-1">
+						<div class="switch">
+						  <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+						  <label for="cmn-toggle-1"></label>
+						</div>
+					</div>
+			</div>
+			<div id="list-container" class="list"><!-- Handlebars template: List item --></div>
+		</div>
+	</div>
+
+	<footer>
+	</footer>
+
+	<div id="document_overlay"><!-- Handlebars template: Overlay --></div>
+
+	<!-- Default scripts, load jQuery via CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js"></script>
+	<script src="scripts/app-dist.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title></title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300" rel="stylesheet" type="text/css">
+ 	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body class="body prototype case shipment">
+<div id="nav"><!-- Handlebars template: Nav --></div>
+<div id="header"><!-- Handlebars template: Header --></div>
+
+	<div class="content">
+
+		<div class="row">
+
+			<div class="col-md-3"><div id="tasks"><!-- Handlebars template: shipment/Tasks --></div></div>
+
+			<div class="col-md-9">
+
+					<div id="manifest"><!-- Handlebars template: shipment/Manifest --></div>
+					<div class="row">
+						<div id="arrival"><!-- Handlebars template: shipment/Arrival --></div>
+						<div id="discharge"><!-- Handlebars template: shipment/Discharge --></div>
+					</div>
+					
+					<div id="goods"><!-- Handlebars template: shipment/Departure --></div>
+					<div id="departure"><!-- Handlebars template: shipment/Departure --></div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer></footer>
+
+	<!-- Default scripts, load jQuery via CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.runtime.min.js"></script>
+	<script src="scripts/app-dist.js"></script>
+
+</body>
+</html>
