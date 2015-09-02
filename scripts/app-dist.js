@@ -20357,13 +20357,13 @@ this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0
     + alias3(((helper = (helper = helpers.assigned_to || (depth0 != null ? depth0.assigned_to : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"assigned_to","hash":{},"data":data}) : helper)))
     + "</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Inkom</small>"
     + alias3(((helper = (helper = helpers.created || (depth0 != null ? depth0.created : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"created","hash":{},"data":data}) : helper)))
-    + "</p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Status</small><a href=\"#\">"
+    + "</p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Status</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.manifest_status || (depth0 != null ? depth0.manifest_status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_status","hash":{},"data":data}) : helper)))
     + "</a></p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Typ</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.manifest_type || (depth0 != null ? depth0.manifest_type : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_type","hash":{},"data":data}) : helper)))
     + "</a>, <a href=\"#\">"
     + alias3(((helper = (helper = helpers.manifest_type_extra || (depth0 != null ? depth0.manifest_type_extra : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_type_extra","hash":{},"data":data}) : helper)))
-    + "</a></p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Kod</small><a href=\"#\">"
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Kod</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.code || (depth0 != null ? depth0.code : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"code","hash":{},"data":data}) : helper)))
     + "</a>, <a href=\"#\">"
     + alias3(((helper = (helper = helpers.code_extra || (depth0 != null ? depth0.code_extra : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"code_extra","hash":{},"data":data}) : helper)))
@@ -20545,10 +20545,6 @@ var Data = {
 		var tasks = [];
 
 		for (var i = length - 1; i >= 0; i--) {
-
-			var importData = Data.importData();
-
-			console.log(importData);
 
 			var item = {
 				company: Data.getRandom(["IKEA", "Saab", "IBM", "Mercedes-Benz"]),
