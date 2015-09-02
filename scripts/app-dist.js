@@ -20058,8 +20058,12 @@ this["Law"]["Templates"]["case/importexport/manifest"] = Handlebars.template({"1
     + alias3(((helper = (helper = helpers.case_status || (depth0 != null ? depth0.case_status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"case_status","hash":{},"data":data}) : helper)))
     + "</h5>\n	</div>\n\n	<div class=\"col-md-1\">\n		<h5><small>Typ</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.type || (depth0 != null ? depth0.type : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"type","hash":{},"data":data}) : helper)))
+    + "</a>, <a href=\"#\">"
+    + alias3(((helper = (helper = helpers.type_extra || (depth0 != null ? depth0.type_extra : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"type_extra","hash":{},"data":data}) : helper)))
     + "</a></h5>\n	</div>\n\n	<div class=\"col-md-1\">\n		<h5><small>kod</small> <a href=\"#\">"
     + alias3(((helper = (helper = helpers.handling_code || (depth0 != null ? depth0.handling_code : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"handling_code","hash":{},"data":data}) : helper)))
+    + "</a>, <a href=\"#\">"
+    + alias3(((helper = (helper = helpers.handling_code_extra || (depth0 != null ? depth0.handling_code_extra : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"handling_code_extra","hash":{},"data":data}) : helper)))
     + "</a></h5>\n	</div>\n\n	<div class=\"col-md-3\">\n		<h5>\n			<small>Ärendestatus: "
     + alias3(((helper = (helper = helpers.manifest_status || (depth0 != null ? depth0.manifest_status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_status","hash":{},"data":data}) : helper)))
     + "</small>\n			<div class=\"progress\">\n			  <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"70\"\n			  aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:0%\">\n			    0%\n			  </div>\n			</div>\n		</h5>\n	</div>\n\n	<div class=\"col-md-1\">\n		<a href=\"#\" data-trigger=\"manifest_details\" class=\"manifest-more-info pull-right\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Mer information\">\n			<span id=\"details\" class=\"glyphicon glyphicon-option-vertical\" aria-hidden=\"true\"></span>\n		</a>\n	</div>\n\n</div>\n\n<div class=\"row customs-info\">\n\n	<div class=\"col-md-2\">\n		<h5><small>Varor</small> "
@@ -20072,7 +20076,7 @@ this["Law"]["Templates"]["case/importexport/manifest"] = Handlebars.template({"1
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.goods_type : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</h5>\n	</div>\n	\n	<div class=\"col-md-2\">\n		<h5><small>Förvaringsplats</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.storage_site || (depth0 != null ? depth0.storage_site : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"storage_site","hash":{},"data":data}) : helper)))
-    + "</a></h5>\n	</div>\n\n	<div class=\"col-md-2\">\n		<h5><small>Deklarant</small><a href=\"#\">"
+    + "</a></h5>\n	</div>\n\n	<div class=\"col-md-4\">\n		<h5><small>Deklarant</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.declared_by || (depth0 != null ? depth0.declared_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"declared_by","hash":{},"data":data}) : helper)))
     + " ("
     + alias3(((helper = (helper = helpers.eori || (depth0 != null ? depth0.eori : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eori","hash":{},"data":data}) : helper)))
@@ -20357,8 +20361,12 @@ this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0
     + alias3(((helper = (helper = helpers.manifest_status || (depth0 != null ? depth0.manifest_status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_status","hash":{},"data":data}) : helper)))
     + "</a></p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Typ</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.manifest_type || (depth0 != null ? depth0.manifest_type : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_type","hash":{},"data":data}) : helper)))
+    + "</a>, <a href=\"#\">"
+    + alias3(((helper = (helper = helpers.manifest_type_extra || (depth0 != null ? depth0.manifest_type_extra : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_type_extra","hash":{},"data":data}) : helper)))
     + "</a></p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Kod</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.code || (depth0 != null ? depth0.code : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"code","hash":{},"data":data}) : helper)))
+    + "</a>, <a href=\"#\">"
+    + alias3(((helper = (helper = helpers.code_extra || (depth0 != null ? depth0.code_extra : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"code_extra","hash":{},"data":data}) : helper)))
     + "</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<div class=\"progress\">\n					  <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"70\"\n					  aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:"
     + alias3(((helper = (helper = helpers.completion || (depth0 != null ? depth0.completion : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"completion","hash":{},"data":data}) : helper)))
     + "%\">\n					    "
@@ -20538,16 +20546,22 @@ var Data = {
 
 		for (var i = length - 1; i >= 0; i--) {
 
+			var importData = Data.importData();
+
+			console.log(importData);
+
 			var item = {
 				company: Data.getRandom(["IKEA", "Saab", "IBM", "Mercedes-Benz"]),
 				owner: "Owner",
 				created: "2015-08-08",
 				code: Data.getRandom([5100, 5400, 3939, 2742]),
+				code_extra: Data.getRandom([5100, 5400, 3939, 2742]),
 				assigned_to: chance.name(),
 				type:  Data.getRandom(["import", "export", "tull-lager", "ankomst", "transit"]),
 				status: Data.getRandom(["import", "export", "tull-lager", "ankomst", "transit"]),
 				manifest_status: "Godtagen",
 				manifest_type: "HNU",
+				manifest_type_extra: "ANK",
 				storage_site: Data.getRandom(["Luleå Hamn", "Jokkmokk", "Helsingfors", "Malmö seaport"]),
 				id: "SE" + chance.integer({min: 1000000000, max: 9999999999}),
 				completion: chance.integer({min: 0, max: 100}),
@@ -20589,7 +20603,6 @@ var Data = {
 			if (seed >= 7) {
 				
 				var fullName = chance.name();
-				console.log(fullName);
 				return [{ name: fullName }];
 
 
@@ -20630,10 +20643,10 @@ var Data = {
 			username: chance.name(),
 			case_status: "Godtagen",
 			manifest_status: "Under bearbetning",
-			type: "HNU",
-			type_extra: "Extra case type",
+			type: "RND",
+			type_extra: "ANK",
 			handling_code: "5100",
-			handling_code_extra: "Extra förfarandekod",
+			handling_code_extra: "4343",
 			total_weight: "1000 kg",
 			goods_count: 0,
 			goods_type: [
