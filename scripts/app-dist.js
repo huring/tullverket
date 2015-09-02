@@ -19672,9 +19672,9 @@ Handlebars.registerHelper('eventList', function(items, options) {
 	  		var time = RandomDate.pretty(new Date(2015, 5, 1), new Date());
 
 	  		out += '<div class="row">';
-	  		out += '<div class="col-md-5 description">' + item["description"] + "</div>";
-	  		out += '<div class="col-md-2 source">' + item["source"] + "</div>";
-			out += '<div class="col-md-4 time">' + time + "</div>";
+	  		out += '<div class="col-md-5 description">' + item["title"] + "</div>";
+	  		out += '<div class="col-md-2 source">' + item["author"] + "</div>";
+			out += '<div class="col-md-4 time">' + item["date"]+ "</div>";
 	  		out += '</div>';
 	  	}
 
@@ -19692,7 +19692,7 @@ Handlebars.registerHelper('fileList', function(items, options) {
 
 		out = '<div class="col-md-12">';
 
-		out += '<h3>' + items.length + ' st Bilagor</h3>';
+		out += '<h2>Bilagor (' + items.length + ' st )</h2>';
 
 	  	for(var i=0, l=items.length; i<l; i++) {
 
@@ -20048,7 +20048,7 @@ this["Law"]["Templates"]["case/importexport/manifest"] = Handlebars.template({"1
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<!-- Handlebars template: case/importexport/manifest -->\n\n<div class=\"row customs-info\">\n	\n	<div class=\"col-md-2\">\n		<h5><small>Tull-ID</small>"
+  return "<!-- Handlebars template: case/importexport/manifest -->\n\n<div class=\"row customs-info\">\n	\n	<div class=\"col-md-2\">\n		<h5><small>Tull-ID (LRN)</small>"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "</h5>\n	</div>\n\n	<div class=\"col-md-2\">\n		<h5><small>Handläggare</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.assigned_to || (depth0 != null ? depth0.assigned_to : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"assigned_to","hash":{},"data":data}) : helper)))
@@ -20337,11 +20337,11 @@ this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0
     + alias3((helpers.strToLower || (depth0 && depth0.strToLower) || alias1).call(depth0,(depth0 != null ? depth0.company : depth0),{"name":"strToLower","hash":{},"data":data}))
     + "\">\n\n	<div class=\"row\">\n			\n		<div class=\"col-md-1 post-type type-"
     + alias3(((helper = (helper = helpers.status || (depth0 != null ? depth0.status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"status","hash":{},"data":data}) : helper)))
-    + "\"><span class=\"label label-danger\">3</span></a></div>\n		\n		<div class=\"col-md-11\">\n			\n			<div class=\"row item-footer\">\n			</div>\n\n			<div class=\"row\">\n				<div class=\"col-md-9\">\n				\n					<h3>"
+    + "\"><span class=\"label label-danger\">3</span></a></div>\n		\n		<div class=\"col-md-11\">\n			\n			<div class=\"row item-footer\">\n			</div>\n\n			<div class=\"row\">\n				<div class=\"col-md-9\">\n				\n					<h3><a href=\"import-export.html\">"
     + alias3(this.lambda(((stack1 = (depth0 != null ? depth0.tasks : depth0)) != null ? stack1.title : stack1), depth0))
-    + " <span>("
+    + "</a> <span>("
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + ")</span> <span>för "
+    + ")</span> <span> "
     + alias3((helpers.prettyDate || (depth0 && depth0.prettyDate) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.arrival_date : depth0)) != null ? stack1.date : stack1),{"name":"prettyDate","hash":{},"data":data}))
     + "</span> </h3>\n\n					<div class=\"metadata\">\n						<ul class=\"morelist\">\n"
     + ((stack1 = helpers.each.call(depth0,((stack1 = (depth0 != null ? depth0.tasks : depth0)) != null ? stack1.more : stack1),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
@@ -20351,7 +20351,7 @@ this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.has_comments : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "				</div>\n\n				<div class=\"col-md-1\">\n\n					<!-- Print active users -->\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.program(12, data, 0),"data":data})) != null ? stack1 : "")
-    + "\n				</div>\n\n			</div>\n			\n			<hr />\n\n			<div class=\"row shipment-information\">\n				<div class=\"col-md-2 info\">\n					<p><small>Tull-ID</small>"
+    + "\n				</div>\n\n			</div>\n			\n			<hr />\n\n			<div class=\"row shipment-information\">\n				<div class=\"col-md-2 info\">\n					<p><small>Tull-ID (LRN)</small>"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "</p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Handläggare</small><a href=\"#\">"
     + alias3(((helper = (helper = helpers.assigned_to || (depth0 != null ? depth0.assigned_to : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"assigned_to","hash":{},"data":data}) : helper)))
@@ -20567,7 +20567,7 @@ var Data = {
 					"cyklar",
 					"hästar"],
 				tasks: {
-					title: "Primär uppgift",
+					title: "Ärenderubrik",
 					id: "Task ID",
 					more: Data.generateTasks(3)
 				},
@@ -20656,7 +20656,6 @@ var Data = {
 			lrn: "LRN",
 			declared_by: chance.name(),
 			infoPanels: [
-				{title: "Aktörer", canEdit: false},
 				{title: "Valuta och avgifter", canEdit: true},
 				{title: "Datum och platser", canEdit: true},
 				{title: "Transport", canEdit: false},
@@ -20775,11 +20774,12 @@ var Data = {
 		"use strict";
 		
 		var fields = [
-			{ key: "Importör", value: '<a href="#">Importör data</a> <span class="more">(' + chance.integer({min: 1000000000, max: 9999999999}) + ')</span>'},
-			{ key: "Deklarant", value: '<a href="#">Importör data</a>'},
-			{ key: "Ombud", value: '<a href="#">' + chance.name() + '</a>'},
+			{ key: "Importör", value: '<a href="#">Importör data</a> <span class="more">(#' + chance.integer({min: 1000000000, max: 9999999999}) + ')</span>'},
+			{ key: "Deklarant", value: '<a href="#">Deklarant data</a> <span class="more">(#' + chance.integer({min: 1000000000, max: 9999999999}) + ')</span>'},
+			{ key: "Ombud", value: '<a href="#">' + chance.name() + '</a> <span class="more">(#' + chance.integer({min: 1000000000, max: 9999999999}) + ')</span>'},
 			{ key: "Ombudsstatus", value: "X"},
-			{ key: "Ansvarig för tillståndet", value: '<a href="#">' + chance.name() + '</a>'}
+			{ key: "Ansvarig för tillståndet", value: '<a href="#">' + chance.name() + '</a>'},
+			{ key: "Tredjelandaktör", value: Data.getRandom(["Tyskland", "Holland", "Norge"])}
 		];
 
 		return fields;
