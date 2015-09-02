@@ -19883,6 +19883,22 @@ this["Law"]["Templates"]["attachment"] = Handlebars.template({"compiler":[6,">= 
     + "</div>\n	</div>\n\n</a>";
 },"useData":true});
 
+this["Law"]["Templates"]["case/actor"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function";
+
+  return "\n				<div class=\"col-md-4\"><p><small>"
+    + this.escapeExpression(((helper = (helper = helpers.key || (depth0 != null ? depth0.key : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"key","hash":{},"data":data}) : helper)))
+    + "</small>"
+    + ((stack1 = ((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p></div>\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<!-- Handlebars template: case/goods -->\n<div id=\"actor\" class=\"block\">\n	<div class=\"info-panel\">\n		<div class=\"row\">\n\n			<div class=\"col-md-12\">\n				<h2>Aktörer</h2>\n			</div>\n\n		</div>\n\n		<div class=\"row\">			\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.actor : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "		</div>\n\n	</div>\n</div>";
+},"useData":true});
+
 this["Law"]["Templates"]["case/arrival"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2=this.escapeExpression;
 
@@ -19891,6 +19907,20 @@ this["Law"]["Templates"]["case/arrival"] = Handlebars.template({"compiler":[6,">
     + "</h2>\n			</div>\n\n			<div class=\"col-md-1\">\n				"
     + alias2((helpers.statusDisplay || (depth0 && depth0.statusDisplay) || alias1).call(depth0,(depth0 != null ? depth0.status : depth0),{"name":"statusDisplay","hash":{},"data":data}))
     + "\n			</div>\n\n			<div class=\"col-md-3\">\n				<a href=\"#\">Trafiktillstånd (enstaka): AA</a>\n			</div>\n\n			<div class=\"col-md-3\">\n				<a href=\"#\">Trafiktillstånd (generellt): AA</a>\n			</div>\n\n			<div class=\"col-md-3\">\n				<form role=\"form\">\n				  <div class=\"checkbox checkbox-success\">\n				    <input type=\"checkbox\" id=\"approve_license\">\n				    <label for=\"approve_license\">\n				        Trafiktillstånd OK\n				    </label>\n				  </div>\n				</form>\n			</div>\n\n			<div class=\"col-md-3\">\n				<form role=\"form\">\n				  <div class=\"checkbox checkbox-success\">\n				    <input type=\"checkbox\" id=\"approve_arrival\" disabled>\n				    <label for=\"approve_arrival\">\n				        Ankomst medges\n				    </label>\n				  </div>\n				</form>\n			</div>\n\n			<div class=\"col-md-12\">\n				<button id=\"decide\" type=\"button\" class=\"btn\" disabled>Besluta</button>\n			</div>\n\n		</div>\n		\n	</div>\n\n</div>\n\n</div>";
+},"useData":true});
+
+this["Law"]["Templates"]["case/attachment"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "			"
+    + this.escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
+    + "\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<!-- Handlebars template: case/goods -->\n<div id=\"attachments\" class=\"info-panel block\">\n	<div class=\"row\">\n"
+    + ((stack1 = (helpers.fileList || (depth0 && depth0.fileList) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.attachments : depth0),{"name":"fileList","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "	</div>\n</div>";
 },"useData":true});
 
 this["Law"]["Templates"]["case/departure"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -20007,9 +20037,8 @@ this["Law"]["Templates"]["case/importexport/info-panel"] = Handlebars.template({
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<!-- Handlebars template: case/importexport/info-panel -->\n<div id=\"manifest\">\n\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.infoPanels : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n</div>";
+  return "<!-- Handlebars template: case/importexport/info-panel -->\n\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.infoPanels : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 
 this["Law"]["Templates"]["case/importexport/manifest"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -20135,6 +20164,44 @@ this["Law"]["Templates"]["case/notification"] = Handlebars.template({"1":functio
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.notifications : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 
+this["Law"]["Templates"]["case/previous-documents"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "		<div class=\"row "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.alert : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + " "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.attachment : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\">\n\n			<div class=\"col-md-1\">"
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "</div>\n			<div class=\"col-md-9\"><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</a></div>\n			<div class=\"col-md-1\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.comments : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.program(10, data, 0),"data":data})) != null ? stack1 : "")
+    + "\n			</div>\n			<div class=\"col-md-1\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.attachment : depth0),{"name":"if","hash":{},"fn":this.program(12, data, 0),"inverse":this.program(10, data, 0),"data":data})) != null ? stack1 : "")
+    + "\n			</div>\n		</div>\n";
+},"2":function(depth0,helpers,partials,data) {
+    return " customs-alert";
+},"4":function(depth0,helpers,partials,data) {
+    return " has-comments";
+},"6":function(depth0,helpers,partials,data) {
+    return " has-attachment";
+},"8":function(depth0,helpers,partials,data) {
+    return "					<span class=\"icon glyphicon glyphicon-comment\" aria-hidden=\"true\"></span> \n				";
+},"10":function(depth0,helpers,partials,data) {
+    return " &nbsp; ";
+},"12":function(depth0,helpers,partials,data) {
+    return "					<span class=\"icon glyphicon glyphicon-paperclip\" aria-hidden=\"true\"></span> \n				";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<!-- Handlebars template: case/goods -->\n<div id=\"previous_documents\" class=\"block\">\n\n	<div class=\"info-panel\">\n		<div class=\"row\">\n\n			<div class=\"col-md-12\">\n				<h2>Tidigare handlingar</h2>\n			</div>\n\n		</div>\n\n	</div>\n\n	<div id=\"previous_table\" class=\"info-panel table\">\n\n		<div class=\"row header-row\">\n			<div class=\"col-md-1\"><strong>Typ</strong></div>\n			<div class=\"col-md-4\"><strong>Beskrivning</strong></div>\n			<div class=\"col-md-2\"></div>\n		</div>\n\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.previous : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n	</div>\n	\n</div>";
+},"useData":true});
+
 this["Law"]["Templates"]["case/tasks"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -20197,12 +20264,14 @@ this["Law"]["Templates"]["header"] = Handlebars.template({"compiler":[6,">= 2.0.
 
 this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     return " "
-    + this.escapeExpression((helpers.strToLower || (depth0 && depth0.strToLower) || helpers.helperMissing).call(depth0,depth0,{"name":"strToLower","hash":{},"data":data}))
-    + " ";
-},"3":function(depth0,helpers,partials,data) {
-    return " "
     + this.escapeExpression(this.lambda(depth0, depth0))
     + " ";
+},"3":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "							<li><a href=\"#\">"
+    + this.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</a></li>\n";
 },"5":function(depth0,helpers,partials,data) {
     return "						<img class=\"ico-attachment\" src=\"images/glyphicons/glyphicons-63-paperclip.png\" width=\"16\" />\n";
 },"7":function(depth0,helpers,partials,data) {
@@ -20228,13 +20297,15 @@ this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0
     + this.escapeExpression(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">\n							<img class=\"svg ico-pin hvr-grow-rotate\" src=\"images/glyphicons/glyphicons-336-pushpin.png\" width=\"16\" />\n						</span>\n";
 },"14":function(depth0,helpers,partials,data) {
-    var helper;
+    var stack1;
 
-  return "							<li><a href=\"#\">"
-    + this.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
-    + "</a></li>\n";
-},"16":function(depth0,helpers,partials,data) {
+  return ((stack1 = (helpers.eventList || (depth0 && depth0.eventList) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.events : depth0),{"name":"eventList","hash":{},"fn":this.program(15, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"15":function(depth0,helpers,partials,data) {
     return "";
+},"17":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = (helpers.fileList || (depth0 && depth0.fileList) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.files : depth0),{"name":"fileList","hash":{},"fn":this.program(18, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"18":function(depth0,helpers,partials,data) {
     var helper;
 
@@ -20262,42 +20333,52 @@ this["Law"]["Templates"]["list-item"] = Handlebars.template({"1":function(depth0
     + alias3((helpers.strToLower || (depth0 && depth0.strToLower) || alias1).call(depth0,(depth0 != null ? depth0.company : depth0),{"name":"strToLower","hash":{},"data":data}))
     + "\">\n\n	<div class=\"row\">\n			\n		<div class=\"col-md-1 post-type type-"
     + alias3(((helper = (helper = helpers.status || (depth0 != null ? depth0.status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"status","hash":{},"data":data}) : helper)))
-    + "\"><span class=\"label label-danger\">3</span></a></div>\n		\n		<div class=\"col-md-11\">\n			\n			<div class=\"row item-footer\">\n				<div class=\"col-md-2 company info\">"
-    + alias3(((helper = (helper = helpers.company || (depth0 != null ? depth0.company : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"company","hash":{},"data":data}) : helper)))
-    + "</div>\n				<div class=\"col-md-6 cargo-type info\"><img class=\"svg ico-manifest\" src=\"images/icons/ico-manifest.svg\" /> <span data-toggle=\"tooltip\" title=\""
-    + ((stack1 = (helpers.cargoList || (depth0 && depth0.cargoList) || alias1).call(depth0,(depth0 != null ? depth0.cargo : depth0),100,{"name":"cargoList","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\" >"
-    + ((stack1 = (helpers.cargoList || (depth0 && depth0.cargoList) || alias1).call(depth0,(depth0 != null ? depth0.cargo : depth0),4,{"name":"cargoList","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</span></div>\n				<div class=\"col-md-1\">\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.files : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "				</div>\n					<div class=\"col-md-1\">\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.has_comments : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "				</div>\n\n				<div class=\"col-md-2\">\n\n					<!-- Print active users -->\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.program(12, data, 0),"data":data})) != null ? stack1 : "")
-    + "\n				</div>\n			</div>\n\n			<div class=\"row\">\n				<div class=\"col-md-12\">\n				\n					<h3>"
+    + "\"><span class=\"label label-danger\">3</span></a></div>\n		\n		<div class=\"col-md-11\">\n			\n			<div class=\"row item-footer\">\n			</div>\n\n			<div class=\"row\">\n				<div class=\"col-md-9\">\n				\n					<h3>"
     + alias3(this.lambda(((stack1 = (depth0 != null ? depth0.tasks : depth0)) != null ? stack1.title : stack1), depth0))
-    + " ("
-    + alias3((helpers.len || (depth0 && depth0.len) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.tasks : depth0)) != null ? stack1.more : stack1),{"name":"len","hash":{},"data":data}))
-    + ") <span>("
+    + " <span>("
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + ")</span> <span>för "
     + alias3((helpers.prettyDate || (depth0 && depth0.prettyDate) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.arrival_date : depth0)) != null ? stack1.date : stack1),{"name":"prettyDate","hash":{},"data":data}))
     + "</span> </h3>\n\n					<div class=\"metadata\">\n						<ul class=\"morelist\">\n"
-    + ((stack1 = helpers.each.call(depth0,((stack1 = (depth0 != null ? depth0.tasks : depth0)) != null ? stack1.more : stack1),{"name":"each","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "						</ul>\n					</div>\n					\n				</div>\n\n			</div>\n			\n			<hr />\n\n			<div class=\"row shipment-information\">\n				<div class=\"col-md-5 info\">\n					Deklarerat av: "
+    + ((stack1 = helpers.each.call(depth0,((stack1 = (depth0 != null ? depth0.tasks : depth0)) != null ? stack1.more : stack1),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "						</ul>\n					</div>\n					\n				</div>\n\n				<div class=\"col-md-1\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.files : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "				</div>\n					<div class=\"col-md-1\">\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.has_comments : depth0),{"name":"if","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "				</div>\n\n				<div class=\"col-md-1\">\n\n					<!-- Print active users -->\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.program(12, data, 0),"data":data})) != null ? stack1 : "")
+    + "\n				</div>\n\n			</div>\n			\n			<hr />\n\n			<div class=\"row shipment-information\">\n				<div class=\"col-md-2 info\">\n					<p><small>Tull-ID</small>"
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "</p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Handläggare</small><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.assigned_to || (depth0 != null ? depth0.assigned_to : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"assigned_to","hash":{},"data":data}) : helper)))
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Inkom</small>"
+    + alias3(((helper = (helper = helpers.created || (depth0 != null ? depth0.created : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"created","hash":{},"data":data}) : helper)))
+    + "</p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Status</small><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.manifest_status || (depth0 != null ? depth0.manifest_status : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_status","hash":{},"data":data}) : helper)))
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Typ</small><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.manifest_type || (depth0 != null ? depth0.manifest_type : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"manifest_type","hash":{},"data":data}) : helper)))
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-1 info\">\n					<p><small>Kod</small><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.code || (depth0 != null ? depth0.code : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"code","hash":{},"data":data}) : helper)))
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<div class=\"progress\">\n					  <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"70\"\n					  aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:"
+    + alias3(((helper = (helper = helpers.completion || (depth0 != null ? depth0.completion : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"completion","hash":{},"data":data}) : helper)))
+    + "%\">\n					    "
+    + alias3(((helper = (helper = helpers.completion || (depth0 != null ? depth0.completion : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"completion","hash":{},"data":data}) : helper)))
+    + "%\n					  </div>\n					</div>\n				</div>\n			</div>\n\n			<div class=\"row shipment-information\">\n				<div class=\"col-md-2 info\">\n					<p><small>Varor</small><a href=\"#\">"
+    + alias3((helpers.len || (depth0 && depth0.len) || alias1).call(depth0,(depth0 != null ? depth0.cargo : depth0),{"name":"len","hash":{},"data":data}))
+    + " st (1000 kg)</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Varuposter</small><a href=\"#\">300 varuposter</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Varuslag</small><a href=\"#\">"
+    + ((stack1 = (helpers.cargoList || (depth0 && depth0.cargoList) || alias1).call(depth0,(depth0 != null ? depth0.cargo : depth0),3,{"name":"cargoList","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-2 info\">\n					<p><small>Förvaringsplats</small><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.storage_site || (depth0 != null ? depth0.storage_site : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"storage_site","hash":{},"data":data}) : helper)))
+    + "</a></p>\n				</div>\n\n				<div class=\"col-md-4 info\">\n					<p><small>Deklarerat av</small><a href=\"#\">"
+    + alias3(((helper = (helper = helpers.company || (depth0 != null ? depth0.company : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"company","hash":{},"data":data}) : helper)))
+    + " - "
     + alias3(((helper = (helper = helpers.declared_by || (depth0 != null ? depth0.declared_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"declared_by","hash":{},"data":data}) : helper)))
     + " ("
-    + alias3(((helper = (helper = helpers.eori || (depth0 != null ? depth0.eori : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"eori","hash":{},"data":data}) : helper)))
-    + ")\n				</div>\n				<div class=\"col-md-3 info\">\n					"
-    + alias3(((helper = (helper = helpers.parcels || (depth0 != null ? depth0.parcels : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"parcels","hash":{},"data":data}) : helper)))
-    + " st kolli ("
-    + alias3(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"weight","hash":{},"data":data}) : helper)))
-    + " kg)\n				</div>\n				<div class=\"col-md-3 info\">\n					Värde: "
-    + alias3(((helper = (helper = helpers.value || (depth0 != null ? depth0.value : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"value","hash":{},"data":data}) : helper)))
-    + " kr\n				</div>\n			</div>\n\n			<hr class=\"metadata\" />\n			\n			<div class=\"eventlog metadata\">\n			\n			<h3>Händelselogg</h3>\n			\n"
-    + ((stack1 = (helpers.eventList || (depth0 && depth0.eventList) || alias1).call(depth0,(depth0 != null ? depth0.events : depth0),{"name":"eventList","hash":{},"fn":this.program(16, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "			\n			</div>\n\n			<hr class=\"metadata\" />\n\n			<!-- Check if we have any file attachments, and print them out. -->\n			<div class=\"row metadata\">\n\n"
-    + ((stack1 = (helpers.fileList || (depth0 && depth0.fileList) || alias1).call(depth0,(depth0 != null ? depth0.files : depth0),{"name":"fileList","hash":{},"fn":this.program(18, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + ")</a></p>\n				</div>\n			</div>\n\n			<hr class=\"metadata\" />\n			\n			<div class=\"eventlog metadata\">\n			\n			<h3>Händelselogg</h3>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.events : depth0),{"name":"if","hash":{},"fn":this.program(14, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "			</div>\n\n			<hr class=\"metadata\" />\n\n			<!-- Check if we have any file attachments, and print them out. -->\n			<div class=\"row metadata\">\n\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.files : depth0),{"name":"if","hash":{},"fn":this.program(17, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "			</div>\n\n		</div>\n		\n	</div>\n\n	</div>\n</div>\n\n";
 },"useData":true});
 
@@ -20450,6 +20531,73 @@ var Data = {
 				});
 	},
 
+	generateInbox: function(length) {
+		"use strict";
+
+		var tasks = [];
+
+		for (var i = length - 1; i >= 0; i--) {
+
+			var item = {
+				company: Data.getRandom(["IKEA", "Saab", "IBM", "Mercedes-Benz"]),
+				owner: "Owner",
+				created: "2015-08-08",
+				code: Data.getRandom([5100, 5400, 3939, 2742]),
+				assigned_to: chance.name(),
+				type:  Data.getRandom(["import", "export", "tull-lager", "ankomst", "transit"]),
+				status: Data.getRandom(["import", "export", "tull-lager", "ankomst", "transit"]),
+				manifest_status: "Godtagen",
+				manifest_type: "HNU",
+				storage_site: Data.getRandom(["Luleå Hamn", "Jokkmokk", "Helsingfors", "Malmö seaport"]),
+				id: "SE" + chance.integer({min: 1000000000, max: 9999999999}),
+				completion: chance.integer({min: 0, max: 100}),
+				cargo: [
+					"Kläder",
+					"vapen",
+					"cyklar",
+					"hästar"],
+				tasks: {
+					title: "Primär uppgift",
+					id: "Task ID",
+					more: Data.generateTasks(3)
+				},
+				users: Data.generateUser(),
+				has_comments: chance.bool(),
+				declared_by: chance.name(),
+				priority: "Priority",
+				eori: "SE" + chance.integer({min: 1000000000, max: 9999999999}),
+				parcels: chance.integer({min: 1, max: 200}),
+				weight: chance.integer({min: 200, max: 2000}),
+				value: chance.integer({min: 1000, max: 10000000}),
+				events: Data.generateEvents(4),
+				files: Data.generateAttachments(chance.integer({min: 0, max: 8}))
+
+			};
+
+			tasks.push(item);
+
+		};
+
+		return tasks;
+	},
+
+	generateUser: function() {
+
+		"use strict";
+
+		var seed = chance.integer({min: 0, max: 10});
+			if (seed >= 7) {
+				
+				var fullName = chance.name();
+				console.log(fullName);
+				return [{ name: fullName }];
+
+
+			} 
+
+		return false;
+	},
+
 	generateTasks: function(length) {
 
 		"use strict";
@@ -20499,22 +20647,17 @@ var Data = {
 			lrn: "LRN",
 			declared_by: chance.name(),
 			infoPanels: [
-				{title: "Tidigare handlingar", canEdit: false},
-				{title: "Procedur", canEdit: true},
 				{title: "Aktörer", canEdit: false},
 				{title: "Valuta och avgifter", canEdit: true},
 				{title: "Datum och platser", canEdit: true},
 				{title: "Transport", canEdit: false},
 				{title: "Övrigt", canEdit: true}
 			],
-			events: [
-				{title: "Händelserubrik", author: "LH", isNew: true, date: moment().startOf('hour').fromNow() },
-				{title: "Händelserubrik", author: "GB", isNew: true, date: moment().subtract(2, 'hours').fromNow() },
-				{title: "Händelserubrik", author: "KG", isNew: true, date: moment().subtract(4, 'hours').fromNow() },
-				{title: "Händelserubrik", author: "RV", date: moment().startOf('day').fromNow() },
-				{title: "Händelserubrik", author: "HS", date: moment().subtract(3, "days").fromNow() }
-			],
+			events: Data.generateEvents(4),
 			tasks: Data.generateTasks(15),
+			attachments: Data.generateAttachments(10),
+			previous: Data.generatePreviousDocuments(5),
+			actor: Data.generateActor(),
 			goods: {
 				id: "goods",
 				title: 'Varuposter',
@@ -20530,6 +20673,23 @@ var Data = {
 		data.goods_count = data.goods.items.length;
 
 		return data;
+	},
+
+	generateEvents: function(length) {
+		
+		"use strict";
+
+
+		// Dirty version
+		var events = [
+				{title: "Händelserubrik", author: "LH", isNew: true, date: moment().startOf('hour').fromNow(), description: chance.sentence() },
+				{title: "Händelserubrik", author: "GB", isNew: true, date: moment().subtract(2, 'hours').fromNow(), description: chance.sentence() },
+				{title: "Händelserubrik", author: "KG", isNew: true, date: moment().subtract(4, 'hours').fromNow(), description: chance.sentence() },
+				{title: "Händelserubrik", author: "RV", date: moment().startOf('day').fromNow(), description: chance.sentence() },
+				{title: "Händelserubrik", author: "HS", date: moment().subtract(3, "days").fromNow(), description: chance.sentence() }
+			];
+
+		return events;
 	},
 
 	generateGoods: function(length) {
@@ -20555,6 +20715,69 @@ var Data = {
 		};
 
 		return goods;
+	},
+
+	generateAttachments: function(length) {
+		"use strict";
+
+		if (length === 0)
+			return undefined;
+
+		var obj = [];
+
+		for (var i = length - 1; i >= 0; i--) {
+
+			var item = {
+				description: chance.sentence({words: Math.floor((Math.random() * 3) + 1)}),
+				type: "jpg"
+			};
+
+			obj.push(item);
+
+		};
+
+		return obj;
+
+	},
+
+	generatePreviousDocuments: function(length) {
+		"use strict";
+		
+		var obj = [];
+
+		for (var i = length - 1; i >= 0; i--) {
+
+			var item = {
+				id: chance.hash({casing: 'upper', length: 5}),
+				title: chance.sentence({words: Math.floor((Math.random() * 3) + 1)}),
+				type: "type",
+				comments: chance.bool(),
+				attachment: chance.bool()
+			};
+
+			obj.push(item);
+
+		};
+
+		return obj;
+	},
+
+	generateActor: function() {
+		"use strict";
+		
+		var fields = [
+			{ key: "Importör", value: '<a href="#">Importör data</a> <span class="more">(' + chance.integer({min: 1000000000, max: 9999999999}) + ')</span>'},
+			{ key: "Deklarant", value: '<a href="#">Importör data</a>'},
+			{ key: "Ombud", value: '<a href="#">' + chance.name() + '</a>'},
+			{ key: "Ombudsstatus", value: "X"},
+			{ key: "Ansvarig för tillståndet", value: '<a href="#">' + chance.name() + '</a>'}
+		];
+
+		return fields;
+	},
+
+	getRandom: function(array) {
+  		return array[Math.floor(Math.random() * array.length)];
 	}
 }
 /*
@@ -21008,6 +21231,18 @@ Context.get("importexport", function() {
 	var toolbar = Law.Templates['toolbar'];
 	$("#toolbar").replaceWith(toolbar(item));
 
+
+	// Get the previous documents
+	var pd = Law.Templates['case/previous-documents'];
+	$("#previous_documents").replaceWith(pd(item));
+
+	// Get the actors
+	var actor = Law.Templates['case/actor'];
+
+	console.log(item);
+
+	$("#actor").replaceWith(actor(item));
+
 	// Get the events
 	var events = Law.Templates['case/event'];
 	$("#eventlist").replaceWith(events(item));
@@ -21037,6 +21272,10 @@ Context.get("importexport", function() {
 		updateProgress($(".checkbox.completed").length);
 
 	});
+
+	// Get the attachments
+	var attachments = Law.Templates['case/attachment'];
+	$("#attachments").replaceWith(attachments(item));
 
 	// Get the goods
 	var goods = Law.Templates['case/goods'];
@@ -21164,12 +21403,20 @@ Context.get("inbox", function() {
 
 	function loadTables() {
 
+		// var listItem = Law.Templates['list-item'];
+		// $(data).each(function(i, item) {
+		// 	$("#list-container").append(listItem(item));
+		// });
+
+		// inlineSVG();
+
+		var item = Data.generateInbox(20);
 		var listItem = Law.Templates['list-item'];
-		$(data).each(function(i, item) {
+
+		$(item).each(function(i, item) {
 			$("#list-container").append(listItem(item));
 		});
 
-		inlineSVG();
 	}
 	
 });
